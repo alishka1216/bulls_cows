@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from django.urls import path
-from webapp.views import posts_create_view
+from webapp.views import posts_create_view, stats
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('posts/add/', posts_create_view),
+    path('', posts_create_view),
+    path('stats/', stats)
 ]
